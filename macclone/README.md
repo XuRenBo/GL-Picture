@@ -11,17 +11,17 @@
 >3.隐藏真实的MAC地址：在某些情况下，例如在连接到公共热点时，可能需要将真实的MAC地址隐藏，从而增加匿名性和安全性，这些特性通过MAC地址克隆可以很好的实现。
 ## 路由器上MAC地址的三个模式
 ### 出厂默认
-![](https://github.com/XuRenBo/GL-Picture/blob/master/gl-macclone/%E5%87%BA%E5%8E%82%E9%BB%98%E8%AE%A41.png?raw=true)
+![](https://github.com/XuRenBo/GL-Picture/blob/master/macclone/gl-macclone/%E5%87%BA%E5%8E%82%E9%BB%98%E8%AE%A41.png?raw=true)
 
-![](https://github.com/XuRenBo/GL-Picture/blob/master/gl-macclone/%E5%87%BA%E5%8E%82%E9%BB%98%E8%AE%A42.png?raw=true)
+![](https://github.com/XuRenBo/GL-Picture/blob/master/macclone/gl-macclone/%E5%87%BA%E5%8E%82%E9%BB%98%E8%AE%A42.png?raw=true)
 
 >出厂默认模式--在不使用MAC地址克隆功能时，路由器的真实MAC地址。
 ### 克隆
-![](https://github.com/XuRenBo/GL-Picture/blob/master/gl-macclone/%E5%85%8B%E9%9A%861.png?raw=true)
+![](https://github.com/XuRenBo/GL-Picture/blob/master/macclone/gl-macclone/%E5%85%8B%E9%9A%861.png?raw=true)
 
 >克隆模式--将当前客户端（即连接到路由器上的设备）的MAC地址克隆到路由器上。
 ### 手动设置
-![](https://github.com/XuRenBo/GL-Picture/blob/master/gl-macclone/%E6%89%8B%E5%8A%A8%E8%AE%BE%E7%BD%AE1.png?raw=true)
+![](https://github.com/XuRenBo/GL-Picture/blob/master/macclone/gl-macclone/%E6%89%8B%E5%8A%A8%E8%AE%BE%E7%BD%AE1.png?raw=true)
 
 >手动设置模式--可以手动输入或者点击随机一个MAC地址，并将该MAC地址克隆到路由器上。
 
