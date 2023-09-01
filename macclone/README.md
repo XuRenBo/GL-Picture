@@ -347,6 +347,17 @@ eth0      Link encap:Ethernet  HWaddr CE:AB:2E:35:BD:A7
 >3.最上面输入的set_mac可以输入也可以不输入，选择POST方法，根据第一步中得到的信息输入请求URL：http://192.168.6.1/rpc；
 
 >4.点击参数，选择自定义格式，选择application/json，根据第一步中得到的信息编写json指令（可按照本文中的set_mac中的请求模仿编写），之后点击发送，得到响应，若响应正确则进入第五步；
+```
+错误响应：
+{
+  "id": null,
+  "jsonrpc": "2.0",
+  -"error": {
+  "message": "Parse error",
+  "code": -32700
+  }
+}
+```
 
 >5.查看路由器Web界面是否发生模式改变，并且查看后台输入ifconfig指令，查看MAC地址是否发生改变，若发生改变则验证成功；
 
