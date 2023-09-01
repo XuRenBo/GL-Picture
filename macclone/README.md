@@ -12,14 +12,21 @@
 
 ## 路由器上MAC地址的三个模式
 ### 出厂默认
+
 ![](https://github.com/XuRenBo/GL-Picture/blob/master/macclone/gl-macclone/%E5%87%BA%E5%8E%82%E9%BB%98%E8%AE%A41.png?raw=true)
+
 ![](https://github.com/XuRenBo/GL-Picture/blob/master/macclone/gl-macclone/%E5%87%BA%E5%8E%82%E9%BB%98%E8%AE%A42.png?raw=true)
+
 >出厂默认模式---在不使用MAC地址克隆功能时，路由器的真实MAC地址。
 ### 克隆
+
 ![](https://github.com/XuRenBo/GL-Picture/blob/master/macclone/gl-macclone/%E5%85%8B%E9%9A%861.png?raw=true)
+
 >克隆模式---将当前客户端（即连接到路由器上的设备）的MAC地址克隆到路由器上。
 ### 手动设置
+
 ![](https://github.com/XuRenBo/GL-Picture/blob/master/macclone/gl-macclone/%E6%89%8B%E5%8A%A8%E8%AE%BE%E7%BD%AE1.png?raw=true)
+
 >手动设置模式---可以手动输入或者随机一个MAC地址，并将该MAC地址克隆到路由器上。
 ### 注意
 >在使用路由器中继功能时，会发现MAC地址的模式中会出现两个MAC地址，在出厂默认模式下的MAC地址都是路由器的真实MAC地址；  
@@ -329,5 +336,16 @@ eth0      Link encap:Ethernet  HWaddr CE:AB:2E:35:BD:A7
 ```
 ## MAC地址克隆实例
 ### Web界面json指令测试
->1.在Web界面按下F12，查看当前页面的Cookie值
->2.通过浏览器插件Postman进行测试
+>1.在Web界面按下F12，查看当前页面信息；  
+
+>2.通过浏览器插件Postman进行测试；
+
+![](https://github.com/XuRenBo/GL-Picture/blob/master/macclone/gl-macclone/JSON%E6%B5%8B%E8%AF%95.png?raw=true)
+
+>3.最上面输入的set_mac可以输入也可以不输入，选择POST方法，根据第一步中得到的信息输入请求URL：http://192.168.6.1/rpc
+
+>4.点击参数，选择自定义格式，选择application/json，根据第一步中得到的信息编写json指令（可按照本文中的set_mac中的请求模仿编写），之后点击发送，得到响应，若响应正确则进入第五步
+
+>5.查看路由器Web界面是否发生模式改变，并且查看后台输入ifconfig指令，查看MAC地址是否发生改变，若发生改变则验证成功
+
+>注：在编写json时，模式编号和MAC地址一定要书写正确，模式编号为0时为出厂默认模式，此时的MAC地址为真实的MAC地址，模式编号为1时为克隆模式，此时的MAC地址为当前客户端的MAC地址，模式编号为2时为手动设置模式，此时的MAC地址为自己编写任意正确的MAC地址
