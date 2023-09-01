@@ -342,12 +342,12 @@ eth0      Link encap:Ethernet  HWaddr CE:AB:2E:35:BD:A7
 
 >2.通过浏览器插件Postman进行测试；
 
-![](https://github.com/XuRenBo/GL-Picture/blob/master/macclone/gl-macclone/JSON%E6%B5%8B%E8%AF%95.png?raw=true)
+![](https://github.com/XuRenBo/GL-Picture/blob/master/macclone/gl-macclone/JSON%E6%B5%8B%E8%AF%95.png?raw=true)；
 
->3.最上面输入的set_mac可以输入也可以不输入，选择POST方法，根据第一步中得到的信息输入请求URL：http://192.168.6.1/rpc
+>3.最上面输入的set_mac可以输入也可以不输入，选择POST方法，根据第一步中得到的信息输入请求URL：http://192.168.6.1/rpc；
 
->4.点击参数，选择自定义格式，选择application/json，根据第一步中得到的信息编写json指令（可按照本文中的set_mac中的请求模仿编写），之后点击发送，得到响应，若响应正确则进入第五步
+>4.点击参数，选择自定义格式，选择application/json，根据第一步中得到的信息编写json指令（可按照本文中的set_mac中的请求模仿编写），之后点击发送，得到响应，若响应正确则进入第五步；
 
->5.查看路由器Web界面是否发生模式改变，并且查看后台输入ifconfig指令，查看MAC地址是否发生改变，若发生改变则验证成功
+>5.查看路由器Web界面是否发生模式改变，并且查看后台输入ifconfig指令，查看MAC地址是否发生改变，若发生改变则验证成功；
 
->注：在编写json时，模式编号和MAC地址一定要书写正确，模式编号为0时为出厂默认模式，此时的MAC地址为真实的MAC地址，模式编号为1时为克隆模式，此时的MAC地址为当前客户端的MAC地址，模式编号为2时为手动设置模式，此时的MAC地址为自己编写任意正确的MAC地址
+>注：在编写json时，模式编号和MAC地址一定要书写正确，模式编号为0时为出厂默认模式，此时的MAC地址为真实的MAC地址，模式编号为1时为克隆模式，此时的MAC地址为当前客户端的MAC地址，模式编号为2时为手动设置模式，此时的MAC地址为自己编写任意正确的MAC地址。
