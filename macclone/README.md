@@ -178,12 +178,12 @@
 ```
   config macclone 'macclone'
       option mode '0'
-  用于设置MAC地址克隆功能的模式，0表示出厂默认模式，1表示克隆模式，2表示手动设置模式
   
   uci指令：
     uci set gl_macclone.macclone.mode='模式选项'
     uci commit gl_macclone
 ```
+>用于设置MAC地址克隆功能的模式，0表示出厂默认模式，1表示克隆模式，2表示手动设置模式
 >2.参数配置---cat /etc/config/glconfig（只截不同的部分）
 ```
 <1>出厂默认模式
@@ -211,15 +211,15 @@
         option macclone '1'
         option macclone_addr '手动设置的MAC地址'
   
-  当启用MAC地址克隆功能即选择克隆模式和手动设置模式时，glconfig配置文件中的名为'general'的配置服务的macclone选项的值被设置为1，同时增加macclone_addr选项，macclone_addr选项的值在克隆模式下是当前客户端的MAC地址，在手动设置模式下是手动写入的一个MAC地址；
-  
-  当关闭MAC地址克隆功能即选择出厂默认模式时，glconfig配置文件中的名为'general'的配置服务下仅有一个macclone选项，此时它的值被设置为0。
-
   uci指令：
     uci set glconfig.general.macclone=1
     uci set glconfig.general.macclone_addr='手动设置的MAC地址'
     uci commit glconfig
 ```
+>当启用MAC地址克隆功能即选择克隆模式和手动设置模式时，glconfig配置文件中的名为'general'的配置服务的macclone选项的值被设置为1，同时增加macclone_addr选项，macclone_addr选项的值在克隆模式下是当前客户端的MAC地址，在手动设置模式下是手动写入的一个MAC地址；
+  
+>当关闭MAC地址克隆功能即选择出厂默认模式时，glconfig配置文件中的名为'general'的配置服务下仅有一个macclone选项，此时它的值被设置为0。
+
 >3.WAN口参数配置---cat /etc/config/network
 ```
 <1>出厂默认模式
