@@ -3,7 +3,7 @@
 >MAC地址是由48位二进制数字表示，是网络设备（如计算机、路由器等）唯一的标识符，用于区分和识别网络设备。MAC地址克隆是将一个设备的MAC地址复制到另外一个设备中，从而使得两个设备在同一个网络中具有相同的MAC地址。
 ## MAC地址克隆的作用
 >MAC地址克隆的主要作用是在网络环境中隐藏或者更改真实的MAC地址，从而达到某些目的。    
-  
+
 >1.避免网络访问限制：某些网络可能会根据设备的MAC地址来进行访问控制和限制该设备，此时克隆一个已经获得访问权限的设备的MAC地址，则可以绕过这些限制，例如智能手机已在网上注册了，则可以将该客户端的MAC地址克隆到路由器上，从而使得路由器也可以连接上网； 
 
 >2.进行新旧设备的替换：当在更换设备后，如果想要新设备和旧设备保持相同的网络权限时，可以使用MAC地址克隆将旧设备的MAC地址克隆到新设备上，从而使得新设备可以获得和旧设备相同的权限，以便于继续使用网络服务；  
@@ -20,10 +20,10 @@
 >克隆模式---将当前客户端（即连接到路由器上的设备）的MAC地址克隆到路由器上。
 ### 手动设置
 ![](https://github.com/XuRenBo/GL-Picture/blob/master/macclone/gl-macclone/%E6%89%8B%E5%8A%A8%E8%AE%BE%E7%BD%AE1.png?raw=true)
->手动设置模式---可以手动输入或者点击随机一个MAC地址，并将该MAC地址克隆到路由器上。
+>手动设置模式---可以手动输入或者随机一个MAC地址，并将该MAC地址克隆到路由器上。
 ### 注意
 >在使用路由器中继功能时，会发现MAC地址的模式中会出现两个MAC地址，在出厂默认模式下的MAC地址都是路由器的真实MAC地址；  
-  
+
 >因为路由器是多WAN口设备，路由器连接以太网的WAN口，用于与互联网提供商（ISP）的设备进行通信，当路由器作为中继器时，路由器连接上级路由器的WAN口，用于与上级路由器设备进行通信；  
 
 >在使用路由器中继功能后，再使用MAC地址克隆，路由器的两个WAN口的MAC地址都会变为克隆的地址，如果没有使用中继功能，此时使用MAC地址克隆，只会改变路由器和以太网连接的WAN口的MAC地址，而另一个WAN口因为没有启用，则不会改变。
@@ -167,7 +167,7 @@
 ### valid_mac
 >valid_mac的功能是用来检验MAC地址的有效性，判断MAC地址是否有效，它在set_mac和get_mac中被调用，因为set_wan_mac的mac地址是由set_mac传递的，因此它不需要调用valid_mac。
 ## MAC地址克隆的uci配置及指令
->1.模式配置--cat /etc/config/gl_macclone
+>1.模式配置---cat /etc/config/gl_macclone
 ```
   config macclone 'macclone'
       option mode '0'
@@ -177,7 +177,7 @@
     uci set gl_macclone.macclone.mode='模式选项'
     uci commit gl_macclone
 ```
->2.参数配置--cat /etc/config/glconfig（只截不同的部分）
+>2.参数配置---cat /etc/config/glconfig（只截不同的部分）
 ```
 <1>出厂默认模式
   config service 'general'
@@ -213,7 +213,7 @@
     uci set glconfig.general.macclone_addr='手动设置的MAC地址'
     uci commit glconfig
 ```
->3.WAN口参数配置--cat /etc/config/network
+>3.WAN口参数配置---cat /etc/config/network
 ```
 <1>出厂默认模式
   config device
@@ -223,7 +223,7 @@
   uci指令：
     uci set network.@device[2].macaddr='真实的MAC地址'
     uci commit network
-``` 
+```
 ```
 <2>克隆模式
   config device
