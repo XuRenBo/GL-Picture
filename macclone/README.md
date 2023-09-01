@@ -89,7 +89,7 @@
 
 >"params"---传递给方法的参数；  
 
->"kOwMhgyNDFmY9bhJuOabavmiiWEvugps"---Cookie值，Cookie是由服务器在浏览器中设置的小型文本文件，用于跟踪用户会话和存储用户信息，每个网站的Cookie值都是唯一的，并且只能在相应的网站域名下访问，同时每个用户的Cookie值是不同的，当用户访问网站时，服务器会生成一个唯一Cookie值存储在该用户浏览器的Cookie文本中，当用户访问同一个网站时，浏览器会在每个请求中自动将相应的 Cookie 值附加上去，以便服务器可以识别和跟踪用户的会话；  
+>"kOwMhgyNDFmY9bhJuOabavmiiWEvugps"---Cookie值，Cookie是由服务器在浏览器中设置的小型文本文件，用于跟踪用户会话和存储用户信息，每个网站的Cookie值都是唯一的，并且只能在相应的网站域名下访问，同时每个用户的Cookie值是不同的，当用户访问网站时，服务器会生成一个唯一Cookie值存储在该用户浏览器的Cookie文本中，当用户访问同一个网站时，浏览器会在每个请求中自动将相应的 Cookie 值附加上去，以便服务器可以识别和跟踪用户的会话，每次用户重新进入浏览器时，Cookie值也是不同的，但是只要没离开界面，当前生成的Cookie值就不会改变；  
 
 >"macclone"---调用的服务名；  
 
@@ -329,3 +329,5 @@ eth0      Link encap:Ethernet  HWaddr CE:AB:2E:35:BD:A7
 ```
 ## MAC地址克隆实例
 ### Web界面json指令测试
+>1.在Web界面按下F12，查看当前页面的Cookie值
+>2.通过浏览器插件Postman进行测试
