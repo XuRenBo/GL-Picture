@@ -338,6 +338,8 @@ eth0      Link encap:Ethernet  HWaddr CE:AB:2E:35:BD:A7
 ### Web界面json指令测试
 >1.在Web界面按下F12，查看当前页面信息；  
 
+![](https://github.com/XuRenBo/GL-Picture/blob/master/macclone/gl-macclone/JSON%E6%B5%8B%E8%AF%952.png?raw=true)
+
 >2.通过浏览器插件Postman进行测试；
 
 ![](https://github.com/XuRenBo/GL-Picture/blob/master/macclone/gl-macclone/JSON%E6%B5%8B%E8%AF%95.png?raw=true)
